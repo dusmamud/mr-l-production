@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f7f2ea;
+  --color-cream-2: #fdfbf6;
+  --color-cream-3: #efe7da;
+  --color-ink: #16130f;
+  --color-ink-2: #4a443c;
+  --color-ink-3: #8a8175;
+  --color-flame: #ff5a00;
+  --color-flame-dark: #d94a00;
+  --color-line: #e3dacb;
+  --font-display: var(--font-archivo), "Archivo", system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-flame);
+  color: #fff;
+}
+
+/* Focus visibility (a11y) */
+:focus-visible {
+  outline: 3px solid var(--color-flame);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Thin elegant scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-cream-3); }
+::-webkit-scrollbar-thumb { background: #c9bda9; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-flame); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
