@@ -7,6 +7,7 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowUpRight, Asterisk, Clapperboard, Fingerprint, Globe, Play } from "lucide-react";
 import { PROCESS, PROJECTS, SERVICES } from "@/data/site";
 import { Eyebrow, Reveal } from "./Reveal";
+import { SmartImage } from "./SmartImage";
 
 const SERVICE_ICONS = { fingerprint: Fingerprint, globe: Globe, clapperboard: Clapperboard } as const;
 
@@ -206,10 +207,6 @@ export function ServicesTeaser() {
       <div className="grid gap-5 pt-10 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s, i) => {
           const Icon = SERVICE_ICONS[s.icon];
-          // Motion Graphics shows the transparent sphere cutout (whole sphere
-          // visible on the card, like the design) instead of the cropped JPG.
-          const isCutout = s.slug === "motion-graphics-video";
-          const imgSrc = isCutout ? "/images/service-motion.png" : s.image;
           return (
             <Reveal key={s.slug} delay={i * 0.08}>
               <Link
@@ -217,18 +214,14 @@ export function ServicesTeaser() {
                 className="group block overflow-hidden rounded-[24px] bg-cream-2 ring-1 ring-line transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-ink/10"
               >
                 <div className="relative overflow-hidden">
-                  <Image
-                    src={imgSrc}
+                  <SmartImage
+                    src={s.image}
                     alt={s.title}
-                    width={isCutout ? 634 : 1200}
-                    height={isCutout ? 647 : 800}
+                    width={1200}
+                    height={800}
                     loading="lazy"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className={
-                      isCutout
-                        ? "aspect-[3/2] w-full bg-cream-2 object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-                        : "aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    }
+                    className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <span className="absolute top-4 left-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/90 text-ink backdrop-blur">
                     <Icon className="h-5 w-5" aria-hidden="true" />
@@ -281,7 +274,7 @@ export function ProjectsTeaser() {
               className="group block overflow-hidden rounded-[24px] ring-1 ring-line transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-ink/10"
             >
               <div className="relative overflow-hidden">
-                <Image
+                <SmartImage
                   src={p.image}
                   alt={p.title}
                   width={1200}

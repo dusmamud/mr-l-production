@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { SmartImage } from "@/components/SmartImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Reveal>
-          <Image src={project.image} alt={project.title} width={1920} height={1280} sizes="100vw" className="aspect-[16/9] w-full rounded-[24px] object-cover" />
+          <SmartImage src={project.image} alt={project.title} width={1920} height={1280} sizes="100vw" className="aspect-[16/9] w-full rounded-[24px] object-cover" />
         </Reveal>
         <div className="grid gap-10 pt-10 lg:grid-cols-2">
           <Reveal>
@@ -81,7 +81,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             {others.map((p) => (
               <Reveal key={p.slug}>
                 <Link href={`/portfolio/${p.slug}`} className="group block overflow-hidden rounded-[24px] ring-1 ring-line">
-                  <Image src={p.image} alt={p.title} width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <SmartImage src={p.image} alt={p.title} width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="flex items-center justify-between bg-cream-2 p-5">
                     <p className="font-display text-lg font-extrabold">{p.title}</p>
                     <ArrowRight className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" />

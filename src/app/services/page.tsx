@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { SmartImage } from "@/components/SmartImage";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
 import { SERVICES } from "@/data/site";
@@ -30,7 +30,7 @@ export default function ServicesPage() {
           <Reveal key={s.slug} delay={i * 0.05}>
             <article className="grid overflow-hidden rounded-[24px] bg-cream-2 ring-1 ring-line md:grid-cols-2">
               <div className="relative min-h-[240px]">
-                <Image
+                <SmartImage
                   src={s.image}
                   alt={s.title}
                   fill

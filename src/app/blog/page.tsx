@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { SmartImage } from "@/components/SmartImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { POSTS } from "@/data/site";
@@ -34,7 +34,7 @@ export default function BlogPage() {
                 className="group flex h-full flex-col overflow-hidden rounded-[24px] bg-cream-2 ring-1 ring-line transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-ink/10"
               >
                 <div className="overflow-hidden">
-                  <Image
+                  <SmartImage
                     src={post.image}
                     alt={post.title}
                     width={1200}

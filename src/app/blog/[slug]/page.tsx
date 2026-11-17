@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { SmartImage } from "@/components/SmartImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               {new Date(post.date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })} • {post.readTime} • {SITE.name}
             </p>
           </div>
-          <Image
+          <SmartImage
             src={post.image}
             alt={post.title}
             width={1200}
@@ -78,7 +78,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="grid gap-5 pt-6 sm:grid-cols-2">
             {others.map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="group overflow-hidden rounded-[24px] ring-1 ring-line">
-                <Image src={p.image} alt={p.title} width={800} height={500} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <SmartImage src={p.image} alt={p.title} width={800} height={500} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="flex items-center justify-between gap-3 bg-cream-2 p-5">
                   <p className="font-display text-base leading-snug font-extrabold">{p.title}</p>
                   <ArrowRight className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" />

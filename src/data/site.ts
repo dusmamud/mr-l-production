@@ -54,7 +54,7 @@ export const SERVICES: Service[] = [
     short: "Bring ideas to life.",
     description:
       "Cinematic reels, product films and animated stories that make people stop scrolling. From storyboard to final grade, our motion work gives your brand a pulse.",
-    image: "/images/service-motion.jpg",
+    image: "/images/service-motion.png",
     deliverables: ["Brand films & reels", "Product videos", "2D / 3D animation", "Social cut-downs"],
     icon: "clapperboard",
   },
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     title: "Motion Reel — Orbit",
     category: "Motion Graphics",
     service: "Motion Graphics & Video",
-    image: "/images/service-motion.jpg",
+    image: "/images/service-motion.png",
     year: "2024",
     client: "Orbit Fitness",
     summary:
@@ -166,7 +166,7 @@ export const POSTS: Post[] = [
     category: "Branding",
     date: "2026-11-10",
     readTime: "5 min read",
-    image: "/images/service-motion.jpg",
+    image: "/images/service-motion.png",
     body: [
       "A logo used to be a stamp. Today it is the first frame of a film — the thing that loads, loops and moves before anyone reads a word. Brands that treat motion as an afterthought end up with a mark that feels frozen in every place it matters most: the reel, the story, the app splash.",
       "We start every identity with a motion idea, not a motion add-on. How does the mark arrive? How does it leave? What does it do when it has one second, and what does it do when it has ten? Answering that early keeps the static logo honest — if it cannot move, it probably cannot survive.",
