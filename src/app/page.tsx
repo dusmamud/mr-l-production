@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { AboutTeaser, Hero, Marquee, ProcessSection, ProjectsTeaser, ServicesTeaser } from "@/components/HomeSections";
 import { CtaBanner } from "@/components/CtaBanner";
+import { ClientStrip } from "@/components/ClientStrip";
+import { Testimonials } from "@/components/Testimonials";
+import { FaqTeaser } from "@/components/FaqTeaser";
 
 export const metadata: Metadata = {
   title: "Mr. L Production — Make Ideas Move | Creative Studio",
@@ -13,10 +16,13 @@ export default function Home() {
     <>
       <Hero />
       <Marquee />
+      <ClientStrip />
       <AboutTeaser />
       <ServicesTeaser />
       <ProjectsTeaser />
+      <Testimonials />
       <ProcessSection />
+      <FaqTeaser />
       <CtaBanner />
     </>
   );

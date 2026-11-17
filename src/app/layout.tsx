@@ -3,6 +3,8 @@ import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Cursor } from "@/components/Cursor";
+import { PageTransition } from "@/components/PageTransition";
 import { SITE } from "@/data/site";
 
 const archivo = Archivo({
@@ -76,9 +78,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
+        <Cursor />
         <Header />
         <main id="main" className="flex-1">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
         <Footer />
       </body>

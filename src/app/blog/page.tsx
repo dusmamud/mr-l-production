@@ -45,7 +45,7 @@ export default function BlogPage() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs font-bold tracking-wide text-flame uppercase">
+                  <p className="text-xs font-bold tracking-wide text-flame-dark uppercase">
                     {post.category} • {new Date(post.date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
                   </p>
                   <h2 className="pt-3 font-display text-xl leading-snug font-extrabold tracking-tight">{post.title}</h2>

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { SmartImage } from "@/components/SmartImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { POSTS, SITE } from "@/data/site";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CtaBanner } from "@/components/CtaBanner";
 import { Eyebrow, Reveal } from "@/components/Reveal";
 
@@ -48,9 +49,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <article className="mx-auto w-full max-w-3xl px-4 pt-10 pb-16 sm:px-6 lg:px-8">
         <Reveal>
-          <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-bold text-ink-2 hover:text-flame">
-            <ArrowLeft className="h-4 w-4" aria-hidden="true" /> All articles
-          </Link>
+          <Breadcrumbs
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Blog", href: "/blog" },
+              { label: post.title },
+            ]}
+          />
           <div className="pt-6">
             <Eyebrow>{post.category}</Eyebrow>
             <h1 className="pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">{post.title}</h1>

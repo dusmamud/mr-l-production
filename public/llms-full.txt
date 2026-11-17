@@ -1,0 +1,89 @@
+# Mr. L Production — full site reference
+
+> A creative studio turning bold ideas into powerful digital experiences — branding, web design and motion graphics. Based in Mumbai, India. Tagline: "Make Ideas Move."
+
+## About
+
+Mr. L Production is a small creative studio. We craft visuals, build brands, and create digital experiences that inspire, engage, and make an impact. Stats shown on the site: 50+ projects completed, 30+ happy clients, 100% creative focus.
+
+## Services
+
+### Branding & Identity — starting from ₹50,000
+From the first sketch to a full identity system — logo, colour, type and voice. Deliverables: logo & wordmark, colour & type system, brand guidelines, stationery & social kit.
+https://mr-l-production.pages.dev/services/branding-identity
+
+### Web Design & Development — starting from ₹80,000
+Fast, accessible, mobile-first websites built on modern stacks. Deliverables: UX & UI design, Next.js development, CMS & e-commerce, SEO & performance.
+https://mr-l-production.pages.dev/services/web-design-development
+
+### Motion Graphics & Video — starting from ₹60,000
+Cinematic reels, product films and animated stories. Deliverables: brand films & reels, product videos, 2D / 3D animation, social cut-downs.
+https://mr-l-production.pages.dev/services/motion-graphics-video
+
+### Ways to work with us
+- Project — best for: a launch, a rebrand or a single campaign.
+- Retainer — best for: brands shipping new work every month.
+- Dedicated — best for: a big launch or a multi-month programme.
+
+## Process (6 weeks, then support)
+
+1. Week 1 — Discover: understand the vision, audience, competitors and constraints.
+2. Week 2 — Define & Concept: shape the idea into concepts with a clear direction.
+3. Weeks 3–4 — Create: concepts, prototypes and films, shown early and often.
+4. Week 5 — Refine: structured critique rounds and revisions.
+5. Week 6 — Deliver & Launch: files, guidelines, training and launch.
+6. Week 7+ — Support: a month of support while the work meets the real world.
+
+Full timeline: https://mr-l-production.pages.dev/process
+
+## Portfolio (selected work)
+
+- Visual Identity — Aurora (Branding, 2025): a complete identity for an outdoor brand.
+  https://mr-l-production.pages.dev/portfolio/visual-identity-aurora
+- Digital Experience — Velocity (Web Design, 2025): a dark, cinematic configurator and marketing site for a performance EV.
+  https://mr-l-production.pages.dev/portfolio/digital-experience-velocity
+- Creative Campaign — Ember (Motion Graphics, 2025): a launch film and social campaign built around liquid light.
+  https://mr-l-production.pages.dev/portfolio/creative-campaign-ember
+- Brand System — Northwind (Branding, 2024): a fluid identity system for an architecture practice.
+  https://mr-l-production.pages.dev/portfolio/brand-system-northwind
+- E-commerce — Lumen (Web Design, 2024): a calm, fast storefront for a homeware brand.
+  https://mr-l-production.pages.dev/portfolio/ecommerce-lumen
+- Motion Reel — Orbit (Motion Graphics, 2024): a kinetic launch reel and app-store motion kit for a fitness app.
+  https://mr-l-production.pages.dev/portfolio/motion-reel-orbit
+
+## Blog
+
+Six articles on branding, web design, motion and process, including "Why motion is the new logo", "Mobile-first is not a phase", and "From concept to creation".
+https://mr-l-production.pages.dev/blog
+
+## FAQ (summary)
+
+- How much does a project cost? Focused engagements typically start at ₹50,000. After a short Discover call the studio gives a fixed quote — no hourly surprises.
+- How long does a project take? A focused branding, web or motion project usually takes 3–6 weeks. Larger projects are scoped in phases with dates agreed up front.
+- Who will I work with? Directly with the senior people making the work — no hand-offs to juniors, no chain of account managers.
+- Do you work with startups? Yes — roughly half the work is with early-stage teams.
+- How many revision rounds are included? Two structured revision rounds per phase, with a review call each time. Extra rounds are quoted in advance.
+- Who owns the work when we are done? The client does. On final payment, all finished files, source assets and guidelines are theirs.
+- Do you work remotely? Yes. Most projects run fully remote, with video workshops for Discover and reviews.
+- What do you need from us to start? One honest conversation and whatever already exists — a brief, a deck, a rough budget and a deadline.
+
+Full FAQ: https://mr-l-production.pages.dev/faq
+
+## Testimonials, team, careers
+
+- Testimonials: https://mr-l-production.pages.dev/testimonials
+- Team: https://mr-l-production.pages.dev/team
+- Careers: no open roles right now; speculative applications by email are welcome.
+  https://mr-l-production.pages.dev/careers
+
+## Contact
+
+- Email: hello@mr-l-production.com
+- Phone: +91 98765 43210
+- Location: Mumbai, India
+- Contact form: https://mr-l-production.pages.dev/contact (no backend — the form opens the visitor's mail app with the enquiry prefilled)
+
+## Notes
+
+- Client names, testimonials and team members shown on this site are placeholder examples until replaced with real values.
+- Short version: https://mr-l-production.pages.dev/llms.txt

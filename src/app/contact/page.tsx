@@ -44,7 +44,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs font-bold tracking-wide text-ink-3 uppercase">{c.label}</p>
                     {c.href ? (
-                      <a href={c.href} className="pt-1 block font-display text-base font-extrabold hover:text-flame">{c.value}</a>
+                      <a href={c.href} className="pt-1 block font-display text-base font-extrabold hover:text-flame-dark">{c.value}</a>
                     ) : (
                       <p className="pt-1 font-display text-base font-extrabold">{c.value}</p>
                     )}

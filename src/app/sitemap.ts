@@ -7,12 +7,19 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const staticPages = ["", "/about", "/services", "/portfolio", "/blog", "/contact"].map((p) => ({
+  const staticPages = ["", "/about", "/services", "/portfolio", "/blog", "/contact", "/testimonials", "/team", "/faq", "/process", "/careers", "/privacy", "/terms"].map((p) => ({
     url: `${SITE.url}${p}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: p === "" ? 1 : 0.8,
   }));
+  // Search is a utility page, not content — included at low priority.
+  const searchPage = {
+    url: `${SITE.url}/search`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.3,
+  };
   const servicePages = SERVICES.map((s) => ({
     url: `${SITE.url}/services/${s.slug}`,
     lastModified: now,
@@ -31,5 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
-  return [...staticPages, ...servicePages, ...projectPages, ...postPages];
+  return [...staticPages, searchPage, ...servicePages, ...projectPages, ...postPages];
 }

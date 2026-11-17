@@ -120,7 +120,7 @@ export function Header() {
                     href={item.href}
                     className="flex items-baseline gap-4 border-b border-line py-4 font-display text-4xl font-black tracking-tight"
                   >
-                    <span className="text-sm font-bold text-flame">0{i + 1}</span>
+                    <span className="text-sm font-bold text-flame-dark">0{i + 1}</span>
                     {item.label}
                   </Link>
                 </motion.div>

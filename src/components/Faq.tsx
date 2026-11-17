@@ -1,13 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-const FAQS = [
-  { q: "How much does a project cost?", a: "Focused engagements typically start at ₹50,000. After a short Discover call we give you a fixed quote — no hourly surprises." },
-  { q: "How long does a project take?", a: "A focused branding, web or motion project usually takes 3–6 weeks. Larger, multi-service projects are scoped in phases with dates agreed up front." },
-  { q: "Who will I work with?", a: "Directly with the senior people making the work. No hand-offs to juniors, no chain of account managers." },
-  { q: "Do you work with startups?", a: "Yes — roughly half our work is with early-stage teams. If the idea is bold and the timeline is honest, we want to hear it." },
-];
+import { FAQS } from "@/data/site";
 
 export function Faq() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);

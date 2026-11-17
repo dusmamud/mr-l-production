@@ -1,0 +1,36 @@
+# Mr. L Production
+
+> A creative studio turning bold ideas into powerful digital experiences — branding, web design and motion graphics. Based in Mumbai, India.
+
+## Pages
+
+- [Home](https://mr-l-production.pages.dev/)
+- [About](https://mr-l-production.pages.dev/about)
+- [Services](https://mr-l-production.pages.dev/services)
+- [Portfolio](https://mr-l-production.pages.dev/portfolio)
+- [Blog](https://mr-l-production.pages.dev/blog)
+- [Testimonials](https://mr-l-production.pages.dev/testimonials)
+- [Team](https://mr-l-production.pages.dev/team)
+- [Process](https://mr-l-production.pages.dev/process)
+- [FAQ](https://mr-l-production.pages.dev/faq)
+- [Careers](https://mr-l-production.pages.dev/careers)
+- [Search](https://mr-l-production.pages.dev/search)
+- [Contact](https://mr-l-production.pages.dev/contact)
+- [Privacy Policy](https://mr-l-production.pages.dev/privacy)
+- [Terms of Service](https://mr-l-production.pages.dev/terms)
+
+## Services
+
+- [Branding & Identity](https://mr-l-production.pages.dev/services/branding-identity) — logo, colour, type and voice. Starting from ₹50,000.
+- [Web Design & Development](https://mr-l-production.pages.dev/services/web-design-development) — fast, accessible, mobile-first websites. Starting from ₹80,000.
+- [Motion Graphics & Video](https://mr-l-production.pages.dev/services/motion-graphics-video) — brand films, reels and animation. Starting from ₹60,000.
+
+## Process
+
+Discover → Define & Concept → Create → Refine → Deliver, over 6 weeks, with support from week 7. See the full week-by-week timeline at [Process](https://mr-l-production.pages.dev/process).
+
+## Notes
+
+- Contact: hello@mr-l-production.com
+- Client names, testimonials and team members shown on this site are placeholder examples until replaced with real values.
+- Full detail: [llms-full.txt](https://mr-l-production.pages.dev/llms-full.txt)
