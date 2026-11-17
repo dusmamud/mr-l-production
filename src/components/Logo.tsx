@@ -1,11 +1,26 @@
 import Link from "next/link";
 
-export function LogoMark({ className = "h-9 w-9" }: { className?: string }) {
+// The mark is the design's bold ML ligature, rebuilt as pure SVG paths
+// (zero <text>): a heavy geometric M whose second diagonal is flame orange,
+// sharing its right stem with the L. The old mark was a thin hand-drawn
+// outline — it did not match the design's bold filled monogram.
+export function LogoMark({ className = "h-8 w-auto" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 48 48" fill="none" className={className} role="img" aria-label="Mr. L Production logo">
-      <path d="M6 40V8l12 16L30 8v32" stroke="#16130f" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M30 8l12 16V8" stroke="#ff5a00" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="42" cy="40" r="3" fill="#ff5a00" />
+    <svg viewBox="0 0 72 48" fill="none" className={className} role="img" aria-label="Mr. L Production logo">
+      <defs>
+        <linearGradient id="ml-flame" x1="27" y1="42" x2="44" y2="8" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#ff3d00" />
+          <stop offset="1" stopColor="#ff8a00" />
+        </linearGradient>
+      </defs>
+      <g strokeWidth="9.5" strokeLinecap="butt" strokeLinejoin="miter" transform="skewX(-3)">
+        {/* M: second diagonal (flame) — drawn first so the ink strokes cover its ends */}
+        <path d="M27 42 L44 8" stroke="url(#ml-flame)" />
+        {/* M: left stem + first diagonal (ink) */}
+        <path d="M10 42 V8 L27 42" stroke="#16130f" />
+        {/* L: right stem + foot (ink) */}
+        <path d="M44 8 V42 H62" stroke="#16130f" />
+      </g>
     </svg>
   );
 }

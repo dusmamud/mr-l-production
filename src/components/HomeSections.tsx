@@ -85,14 +85,16 @@ export function Hero() {
           className="relative"
         >
           <div className="animate-float">
+            {/* Transparent PNG cutout — the portrait floats on the cream page
+                like the design, instead of sitting in a dark JPG rectangle. */}
             <Image
-              src="/images/hero.jpg"
+              src="/images/hero.png"
               alt="Creative portrait — a man looking up, surrounded by flowing orange light trails"
-              width={1280}
-              height={1920}
+              width={607}
+              height={858}
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="aspect-[4/5] w-full rounded-[28px] object-cover sm:aspect-[3/4] lg:aspect-[4/5]"
+              className="h-auto w-full drop-shadow-[0_24px_32px_rgba(22,19,15,0.18)]"
             />
           </div>
           <div className="absolute right-4 bottom-4 flex items-center gap-3 rounded-full bg-cream/90 px-4 py-2.5 text-xs font-bold shadow-lg backdrop-blur">
@@ -204,6 +206,10 @@ export function ServicesTeaser() {
       <div className="grid gap-5 pt-10 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s, i) => {
           const Icon = SERVICE_ICONS[s.icon];
+          // Motion Graphics shows the transparent sphere cutout (whole sphere
+          // visible on the card, like the design) instead of the cropped JPG.
+          const isCutout = s.slug === "motion-graphics-video";
+          const imgSrc = isCutout ? "/images/service-motion.png" : s.image;
           return (
             <Reveal key={s.slug} delay={i * 0.08}>
               <Link
@@ -212,13 +218,17 @@ export function ServicesTeaser() {
               >
                 <div className="relative overflow-hidden">
                   <Image
-                    src={s.image}
+                    src={imgSrc}
                     alt={s.title}
-                    width={1200}
-                    height={800}
+                    width={isCutout ? 634 : 1200}
+                    height={isCutout ? 647 : 800}
                     loading="lazy"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={
+                      isCutout
+                        ? "aspect-[3/2] w-full bg-cream-2 object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                        : "aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    }
                   />
                   <span className="absolute top-4 left-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/90 text-ink backdrop-blur">
                     <Icon className="h-5 w-5" aria-hidden="true" />
@@ -302,14 +312,16 @@ export function ProcessSection() {
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <div className="animate-float">
+            {/* Transparent PNG cutout — the ring floats on the cream page
+                like the design, instead of a JPG box with its own background. */}
             <Image
-              src="/images/process-ring.jpg"
+              src="/images/process-ring.png"
               alt="A black ring wrapped in orange light — our process, in one image"
-              width={1920}
-              height={1280}
+              width={820}
+              height={588}
               loading="lazy"
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="aspect-[3/2] w-full rounded-[24px] object-cover"
+              className="h-auto w-full drop-shadow-xl"
             />
           </div>
         </Reveal>
