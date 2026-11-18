@@ -549,16 +549,14 @@ export function ProcessSection() {
           </Reveal>
           <ol className="pt-8">
             {PROCESS.map((step, i) => (
-              <Reveal key={step.n} delay={i * 0.08}>
-                <li className="flex gap-5 border-b border-line py-5 first:pt-0 last:border-b-0">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/20 font-display text-sm font-black text-flame-dark">
-                    {step.n}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-xl font-extrabold tracking-tight">{step.title}</h3>
-                    <p className="pt-1 text-sm leading-relaxed text-ink-2">{step.text}</p>
-                  </div>
-                </li>
+              <Reveal key={step.n} as="li" delay={i * 0.08} className="flex gap-5 border-b border-line py-5 first:pt-0 last:border-b-0">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/20 font-display text-sm font-black text-flame-dark">
+                  {step.n}
+                </span>
+                <div>
+                  <h3 className="font-display text-xl font-extrabold tracking-tight">{step.title}</h3>
+                  <p className="pt-1 text-sm leading-relaxed text-ink-2">{step.text}</p>
+                </div>
               </Reveal>
             ))}
           </ol>

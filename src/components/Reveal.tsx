@@ -17,12 +17,16 @@ type RevealProps = {
   delay?: number;
   y?: number;
   className?: string;
+  /** Render as <li> when the Reveal wraps a list item — a motion.div
+      inside <ol>/<ul> breaks the list structure (a11y "list" audits). */
+  as?: "div" | "li";
 };
 
-export function Reveal({ children, delay = 0, y = 28, className }: RevealProps) {
+export function Reveal({ children, delay = 0, y = 28, className, as = "div" }: RevealProps) {
   const reduce = useReducedMotion();
+  const Tag = as === "li" ? motion.li : motion.div;
   return (
-    <motion.div
+    <Tag
       className={className}
       initial={{ opacity: 0, y: reduce ? 0 : y }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +34,7 @@ export function Reveal({ children, delay = 0, y = 28, className }: RevealProps) 
       transition={{ duration: 0.7, delay, ease: EASE }}
     >
       {children}
-    </motion.div>
+    </Tag>
   );
 }
 
