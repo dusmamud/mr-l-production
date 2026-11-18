@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SmartImage } from "@/components/SmartImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { POSTS } from "@/data/site";
+import { POSTS, SITE } from "@/data/site";
 import { CtaBanner } from "@/components/CtaBanner";
 import { Eyebrow, Reveal } from "@/components/Reveal";
 
@@ -12,13 +12,24 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const listJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: POSTS.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${SITE.url}/blog/${p.slug}`,
+      name: p.title,
+    })),
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listJsonLd) }} />
       <section className="mx-auto w-full max-w-7xl px-4 pt-10 pb-8 sm:px-6 lg:px-8 lg:pt-14">
         <Reveal>
           <Eyebrow>Blog</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            Notes from the <span className="text-flame">studio.</span>
+            Notes from the <span className="text-flame-dark">studio.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             What we are learning, building and unlearning — on branding, web, motion and the process in between.
@@ -36,7 +47,7 @@ export default function BlogPage() {
                 <div className="overflow-hidden">
                   <SmartImage
                     src={post.image}
-                    alt={post.title}
+                    alt=""
                     width={1200}
                     height={800}
                     loading="lazy"
@@ -51,7 +62,7 @@ export default function BlogPage() {
                   <h2 className="pt-3 font-display text-xl leading-snug font-extrabold tracking-tight">{post.title}</h2>
                   <p className="flex-1 pt-2 text-sm leading-relaxed text-ink-2">{post.excerpt}</p>
                   <p className="inline-flex items-center gap-2 pt-4 text-sm font-bold text-ink">
-                    Read article <ArrowRight className="h-4 w-4 text-flame transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                    Read article <ArrowRight className="h-4 w-4 text-flame-dark transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </p>
                 </div>
               </Link>

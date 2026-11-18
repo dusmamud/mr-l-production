@@ -12,10 +12,10 @@ export function FaqTeaser() {
         <Eyebrow>FAQ</Eyebrow>
         <div className="flex flex-wrap items-end justify-between gap-4 pt-4">
           <h2 className="max-w-xl font-display text-3xl font-black tracking-tight sm:text-4xl">
-            Asked <span className="text-flame">often.</span>
+            Asked <span className="text-flame-dark">often.</span>
           </h2>
-          <Link href="/faq" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-flame">
-            All questions <ArrowRight className="h-4 w-4 text-flame" aria-hidden="true" />
+          <Link href="/faq" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-flame-dark">
+            All questions <ArrowRight className="h-4 w-4 text-flame-dark" aria-hidden="true" />
           </Link>
         </div>
       </Reveal>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { SmartImage } from "@/components/SmartImage";
 import Link from "next/link";
 import { ArrowUpRight, Check } from "lucide-react";
@@ -19,7 +18,7 @@ export default function ServicesPage() {
         <Reveal>
           <Eyebrow>Our Services</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            From concept to creation — <span className="text-flame">we do it all.</span>
+            From concept to creation — <span className="text-flame-dark">we do it all.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             Three disciplines, one team, one standard. Pick a service — or bring us the whole problem and let us assemble the right mix.
@@ -52,28 +51,28 @@ export default function ServicesPage() {
                   <ul className="grid max-w-3xl gap-2 pt-5 sm:grid-cols-2">
                     {s.deliverables.map((d) => (
                       <li key={d} className="flex items-center gap-2 text-sm font-semibold">
-                        <Check className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" /> {d}
+                        <Check className="h-4 w-4 shrink-0 text-flame-dark" aria-hidden="true" /> {d}
                       </li>
                     ))}
                   </ul>
                   <div className="pt-6">
                     <Link
                       href={`/services/${s.slug}`}
-                      className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold text-cream transition-colors hover:bg-flame"
+                      className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold text-cream transition-colors hover:bg-flame-dark"
                     >
                       Explore {s.title} <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                     </Link>
                   </div>
                 </div>
                 {isMotion ? (
-                  /* Motion sphere OVERFLOW, same as the home card: rendered
-                     directly with next/image (not SmartImage's contained
-                     rendering), centred, with a drop-shadow and a negative
-                     bottom margin so it pokes below the panel edge. */
+                  /* Motion sphere OVERFLOW, same as the home card: SmartImage's
+                     contained cutout rendering is a no-op here (no object-cover
+                     class), so the sphere stays centred with a drop-shadow and
+                     a negative bottom margin, poking below the panel edge. */
                   <div className="relative overflow-visible px-6 -mb-6">
-                    <Image
+                    <SmartImage
                       src={s.image}
-                      alt={s.title}
+                      alt=""
                       width={634}
                       height={647}
                       loading="lazy"
@@ -87,7 +86,7 @@ export default function ServicesPage() {
                   <div className="relative overflow-hidden rounded-b-[24px]">
                     <SmartImage
                       src={s.image}
-                      alt={s.title}
+                      alt=""
                       width={1600}
                       height={900}
                       loading="lazy"
@@ -105,7 +104,7 @@ export default function ServicesPage() {
         <Reveal>
           <Eyebrow>Ways To Work With Us</Eyebrow>
           <h2 className="max-w-2xl pt-4 font-display text-3xl leading-[1.08] font-black tracking-tight sm:text-4xl">
-            Pick the engagement that <span className="text-flame">fits the work.</span>
+            Pick the engagement that <span className="text-flame-dark">fits the work.</span>
           </h2>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2">
             One project, an ongoing retainer, or a dedicated team for a season — the work stays senior either way.

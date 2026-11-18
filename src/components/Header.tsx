@@ -56,7 +56,7 @@ export function Header() {
                 >
                   {item.label}
                   <span
-                    className={`absolute -bottom-1.5 left-0 h-[2px] bg-flame transition-all duration-300 ${
+                    className={`absolute -bottom-1.5 left-0 h-[2px] bg-flame-dark transition-all duration-300 ${
                       active ? "w-full" : "w-0"
                     }`}
                     aria-hidden="true"
@@ -133,7 +133,7 @@ export function Header() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-flame px-7 py-3.5 text-sm font-bold text-white"
+                  className="inline-flex items-center gap-2 rounded-full bg-flame-dark px-7 py-3.5 text-sm font-bold text-white"
                 >
                   Get In Touch <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>

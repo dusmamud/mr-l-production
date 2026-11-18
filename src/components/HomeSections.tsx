@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowRight, ArrowUpRight, Asterisk, Clapperboard, Fingerprint, Globe, Pause, Play, X } from "lucide-react";
@@ -75,7 +74,7 @@ export function Hero() {
             <MaskedHeadline
               as="h1"
               className="pt-5 font-display text-[clamp(4rem,11vw,10.5rem)] leading-[0.95] font-black tracking-tight"
-              lines={["MAKE", "IDEAS", <span key="m" className="text-flame">MOVE.</span>]}
+              lines={["MAKE", "IDEAS", <span key="m" className="text-flame-dark">MOVE.</span>]}
             />
             <p className="max-w-md pt-5 text-base leading-relaxed text-ink-2 sm:text-lg">
               A creative studio turning bold ideas into powerful digital experiences.
@@ -84,7 +83,7 @@ export function Hero() {
               <MagneticButton>
                 <Link
                   href="/portfolio"
-                  className="inline-flex items-center gap-2 rounded-full bg-flame px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-flame/25 transition-transform hover:scale-[1.03] active:scale-95"
+                  className="inline-flex items-center gap-2 rounded-full bg-flame-dark px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-flame/25 transition-transform hover:scale-[1.03] active:scale-95"
                 >
                   Explore Our Work <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
@@ -96,7 +95,7 @@ export function Hero() {
                 aria-label="Watch reel"
                 aria-haspopup="dialog"
               >
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink/20 bg-cream-2 transition-all group-hover:border-flame group-hover:bg-flame group-hover:text-white">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-ink/20 bg-cream-2 transition-all group-hover:border-flame group-hover:bg-flame-dark group-hover:text-white">
                   <Play className="h-4 w-4 fill-current" aria-hidden="true" />
                 </span>
                 Watch Reel
@@ -116,7 +115,7 @@ export function Hero() {
             <div className="animate-float">
               {/* Transparent PNG cutout — the portrait floats on the cream page
                   like the design, instead of sitting in a dark JPG rectangle. */}
-              <Image
+              <SmartImage
                 src="/images/hero-wide.png"
                 alt="Creative portrait — a man looking up, surrounded by flowing orange light trails"
                 width={651}
@@ -129,7 +128,7 @@ export function Hero() {
           </ParallaxImage>
           {/* Bottom-left of the image, clear of the face (top-left). */}
           <div className="absolute bottom-4 left-4 flex items-center gap-3 rounded-full bg-cream/90 px-4 py-2.5 text-xs font-bold shadow-lg backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-flame" aria-hidden="true" />
+            <span className="h-2 w-2 rounded-full bg-flame-dark" aria-hidden="true" />
             50+ projects shipped
           </div>
         </div>
@@ -169,7 +168,7 @@ export function Hero() {
             type="button"
             onClick={() => setReelOpen(false)}
             aria-label="Close showreel"
-            className="absolute -top-12 right-0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream text-ink transition-colors hover:bg-flame hover:text-white"
+            className="absolute -top-12 right-0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream text-ink transition-colors hover:bg-flame-dark hover:text-white"
           >
             <X className="h-5 w-5" aria-hidden="true" />
           </button>
@@ -203,7 +202,7 @@ export function Marquee() {
       >
         {row.map((item, i) => (
           <span key={i} className="flex items-center gap-8 font-display text-lg font-extrabold tracking-tight text-ink/80">
-            {item} <Asterisk className="h-5 w-5 text-flame" />
+            {item} <Asterisk className="h-5 w-5 text-flame-dark" />
           </span>
         ))}
       </div>
@@ -212,7 +211,7 @@ export function Marquee() {
         onClick={() => setPaused((p) => !p)}
         aria-label={paused ? "Play marquee" : "Pause marquee"}
         aria-pressed={paused}
-        className="absolute top-1/2 right-3 z-10 inline-flex -translate-y-1/2 items-center gap-1.5 rounded-full bg-cream px-3 py-1.5 text-xs font-bold text-ink shadow-md ring-1 ring-line transition-colors hover:text-flame sm:right-6"
+        className="absolute top-1/2 right-3 z-10 inline-flex -translate-y-1/2 items-center gap-1.5 rounded-full bg-cream px-3 py-1.5 text-xs font-bold text-ink shadow-md ring-1 ring-line transition-colors hover:text-flame-dark sm:right-6"
       >
         {paused ? <Play className="h-3.5 w-3.5 fill-current" aria-hidden="true" /> : <Pause className="h-3.5 w-3.5 fill-current" aria-hidden="true" />}
         {paused ? "Play" : "Pause"}
@@ -228,12 +227,12 @@ export function AboutTeaser() {
           Clipped by the section's own overflow-hidden, so it can never cause
           horizontal overflow. */}
       <div className="pointer-events-none absolute -top-2 -right-8 sm:-right-4 lg:-right-2" aria-hidden="true">
-        <Asterisk className="animate-spin-slow h-24 w-24 text-flame sm:h-32 sm:w-32" />
+        <Asterisk className="animate-spin-slow h-24 w-24 text-flame-dark sm:h-32 sm:w-32" />
       </div>
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <div className="relative">
-            <Image
+            <SmartImage
               src="/images/about.jpg"
               alt="A lone figure walking toward a huge orange sun — the studio's belief in imagination"
               width={1920}
@@ -251,7 +250,7 @@ export function AboutTeaser() {
           <Reveal>
             <Eyebrow>About Mr. L Production</Eyebrow>
             <h2 className="pt-4 font-display text-3xl leading-[1.08] font-black tracking-tight sm:text-4xl lg:text-[2.75rem]">
-              We are a creative agency that believes in the power of <span className="text-flame">imagination.</span>
+              We are a creative agency that believes in the power of <span className="text-flame-dark">imagination.</span>
             </h2>
             <p className="pt-4 max-w-xl text-base leading-relaxed text-ink-2">
               We craft stunning visuals, build meaningful brands, and create digital experiences that inspire, engage, and make an impact.
@@ -292,7 +291,7 @@ export function ServicesTeaser() {
           <h2 className="pt-4 font-display text-3xl leading-[1.08] font-black tracking-tight sm:text-4xl lg:text-[2.75rem]">
             From concept
             <br />
-            to creation — <span className="text-flame">we do it all.</span>
+            to creation — <span className="text-flame-dark">we do it all.</span>
           </h2>
           <Link
             href="/services"
@@ -344,7 +343,7 @@ export function ServicesTeaser() {
                           <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream ring-1 ring-line">
                             <Icon className="h-5 w-5" aria-hidden="true" />
                           </span>
-                          <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-cream transition-colors group-hover:bg-flame">
+                          <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ink text-cream transition-colors group-hover:bg-flame-dark">
                             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                           </span>
                         </div>
@@ -352,19 +351,18 @@ export function ServicesTeaser() {
                         <p className="pt-1 text-sm text-ink-2">{s.short}</p>
                       </div>
                       {isMotion ? (
-                        /* Motion sphere OVERFLOW: rendered directly with
-                           next/image (NOT SmartImage — its contained
-                           rendering adds padding + object-contain). The
-                           wrapper's negative bottom margin pulls the card's
-                           bottom edge up, so the sphere pokes below the card
+                        /* Motion sphere OVERFLOW: SmartImage's contained
+                           cutout rendering is a no-op here (no object-cover
+                           class), so the sphere still pokes below the card
                            (24px on mobile, 48px on lg) with a drop-shadow,
-                           like the design.
+                           like the design. The wrapper's negative bottom
+                           margin pulls the card's bottom edge up.
                            Overflow stays inside this card's column; the
                            grid's bottom padding absorbs it. */
                         <div className="relative mt-auto overflow-visible px-6 -mb-6 lg:-mb-12">
-                          <Image
+                          <SmartImage
                             src={s.image}
-                            alt={s.title}
+                            alt=""
                             width={634}
                             height={647}
                             loading="lazy"
@@ -379,7 +377,7 @@ export function ServicesTeaser() {
                         <div className="relative mt-auto overflow-hidden rounded-b-[24px]">
                           <SmartImage
                             src={s.image}
-                            alt={s.title}
+                            alt=""
                             width={1200}
                             height={800}
                             loading="lazy"
@@ -440,7 +438,7 @@ export function ProjectsTeaser() {
               <br />
               We&apos;ve Brought
               <br />
-              <span className="text-flame">to Life.</span>
+              <span className="text-flame-dark">to Life.</span>
             </h2>
             <div className="flex items-center gap-3 pt-6">
               <button
@@ -488,7 +486,7 @@ export function ProjectsTeaser() {
               <div className="relative aspect-[4/5] overflow-hidden">
                 <SmartImage
                   src={p.image}
-                  alt={p.title}
+                  alt=""
                   width={900}
                   height={1125}
                   loading="lazy"
@@ -518,18 +516,18 @@ export function ProcessSection() {
         <Reveal>
           <div className="animate-float relative">
             {/* Design marks: small 4-point star sparkles near the process ring. */}
-            <svg viewBox="0 0 24 24" fill="currentColor" className="animate-spin-slow pointer-events-none absolute -top-1 right-10 h-6 w-6 text-flame" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="animate-spin-slow pointer-events-none absolute -top-1 right-10 h-6 w-6 text-flame-dark" aria-hidden="true">
               <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" />
             </svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" className="pointer-events-none absolute right-2 bottom-8 h-4 w-4 text-flame" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="pointer-events-none absolute right-2 bottom-8 h-4 w-4 text-flame-dark" aria-hidden="true">
               <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" />
             </svg>
-            <svg viewBox="0 0 24 24" fill="currentColor" className="pointer-events-none absolute top-1/2 left-1 h-5 w-5 text-flame" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="pointer-events-none absolute top-1/2 left-1 h-5 w-5 text-flame-dark" aria-hidden="true">
               <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" />
             </svg>
             {/* Transparent PNG cutout — the ring floats on the cream page
                 like the design, instead of a JPG box with its own background. */}
-            <Image
+            <SmartImage
               src="/images/process-ring.png"
               alt="A black ring wrapped in orange light — our process, in one image"
               width={820}
@@ -546,14 +544,14 @@ export function ProcessSection() {
             <h2 className="pt-4 font-display text-3xl leading-[1.08] font-black tracking-tight sm:text-4xl lg:text-[2.75rem]">
               A Simple Process.
               <br />
-              A Big <span className="text-flame">Impact.</span>
+              A Big <span className="text-flame-dark">Impact.</span>
             </h2>
           </Reveal>
           <ol className="pt-8">
             {PROCESS.map((step, i) => (
               <Reveal key={step.n} delay={i * 0.08}>
                 <li className="flex gap-5 border-b border-line py-5 first:pt-0 last:border-b-0">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/20 font-display text-sm font-black text-flame">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink/20 font-display text-sm font-black text-flame-dark">
                     {step.n}
                   </span>
                   <div>

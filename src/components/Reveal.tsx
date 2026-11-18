@@ -37,7 +37,7 @@ export function Reveal({ children, delay = 0, y = 28, className }: RevealProps) 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
     <p className="flex items-center gap-3 text-[11px] font-bold tracking-[0.28em] text-ink-2 uppercase">
-      <span className="h-[2px] w-8 bg-flame" aria-hidden="true" />
+      <span className="h-[2px] w-8 bg-flame-dark" aria-hidden="true" />
       {children}
     </p>
   );
@@ -253,7 +253,7 @@ type ParallaxImageProps = {
 /**
  * Scroll-linked image wrapper: gentle y-parallax as the section travels
  * through the viewport, plus a scale-in from 0.96 → 1 as it enters.
- * Wrap a next/image (or SmartImage) with it. Reduced-motion renders a
+ * Wrap a SmartImage with it. Reduced-motion renders a
  * static div — no scroll listener, no transform.
  */
 export function ParallaxImage({ children, className, strength = 40, bleed = false }: ParallaxImageProps) {

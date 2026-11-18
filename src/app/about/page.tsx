@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { SmartImage } from "@/components/SmartImage";
 import { Eye, Heart, Lightbulb, Target } from "lucide-react";
 import { ProcessSection } from "@/components/HomeSections";
 import { CtaBanner } from "@/components/CtaBanner";
@@ -25,7 +25,7 @@ export default function AboutPage() {
         <Reveal>
           <Eyebrow>About Mr. L Production</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            A small studio with a big <span className="text-flame">imagination.</span>
+            A small studio with a big <span className="text-flame-dark">imagination.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             We started Mr. L Production with one belief: bold ideas deserve craft to match. Today we are a compact team of designers, developers and filmmakers helping brands look, feel and move like they mean it.
@@ -36,11 +36,12 @@ export default function AboutPage() {
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <Image
+            <SmartImage
               src="/images/about.jpg"
               alt="A lone figure walking toward a huge orange sun"
               width={1920}
               height={1280}
+              priority
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="aspect-[3/2] w-full rounded-[24px] object-cover"
             />
@@ -78,7 +79,7 @@ export default function AboutPage() {
           {VALUES.map((v, i) => (
             <Reveal key={v.title} delay={i * 0.08}>
               <div className="h-full rounded-[24px] bg-cream-2 p-6 ring-1 ring-line">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-flame/10 text-flame">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-flame/10 text-flame-dark">
                   <v.Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h3 className="pt-4 font-display text-lg font-extrabold tracking-tight">{v.title}</h3>

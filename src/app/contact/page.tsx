@@ -17,7 +17,7 @@ export default function ContactPage() {
         <Reveal>
           <Eyebrow>Get In Touch</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            Let&apos;s create something <span className="text-flame">extraordinary.</span>
+            Let&apos;s create something <span className="text-flame-dark">extraordinary.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             Have a project in mind? Tell us about it — we reply to every serious enquiry within one working day.
@@ -38,7 +38,7 @@ export default function ContactPage() {
                 { Icon: Clock, label: "Hours", value: "Mon–Sat, 10:00 – 19:00 IST", href: undefined },
               ].map((c) => (
                 <div key={c.label} className="flex items-start gap-4 rounded-[20px] bg-cream-2 p-5 ring-1 ring-line">
-                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-flame/10 text-flame">
+                  <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-flame/10 text-flame-dark">
                     <c.Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <div>

@@ -33,11 +33,11 @@ export function ContactForm() {
   if (sent) {
     return (
       <div className="rounded-[24px] bg-cream-2 p-8 text-center ring-1 ring-line sm:p-10" role="status">
-        <CheckCircle2 className="mx-auto h-12 w-12 text-flame" aria-hidden="true" />
+        <CheckCircle2 className="mx-auto h-12 w-12 text-flame-dark" aria-hidden="true" />
         <h2 className="pt-4 font-display text-2xl font-black tracking-tight">Your mail app should have opened.</h2>
         <p className="mx-auto max-w-md pt-2 text-sm leading-relaxed text-ink-2 sm:text-base">
           Your mail app should have opened with the enquiry ready to send — press send there to deliver it. If it didn&apos;t open, email us directly at{" "}
-          <a href={`mailto:${SITE.email}`} className="font-bold text-flame underline underline-offset-2">
+          <a href={`mailto:${SITE.email}`} className="font-bold text-flame-dark underline underline-offset-2">
             {SITE.email}
           </a>
           .
@@ -94,12 +94,12 @@ export function ContactForm() {
       {error && (
         <p className="mt-4 rounded-xl bg-flame/10 px-4 py-3 text-sm font-semibold text-flame-dark" role="alert">{error}</p>
       )}
-      <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-flame px-6 py-4 text-sm font-bold text-white transition-transform hover:scale-[1.01] active:scale-95 sm:w-auto">
+      <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-flame-dark px-6 py-4 text-sm font-bold text-white transition-transform hover:scale-[1.01] active:scale-95 sm:w-auto">
         Send via Email <ArrowRight className="h-4 w-4" aria-hidden="true" />
       </button>
       <p className="pt-3 text-xs leading-relaxed text-ink-3">
         No form backend — sending opens your mail app with the enquiry prefilled; nothing is sent until you press send there. Or email us directly at{" "}
-        <a href={`mailto:${SITE.email}`} className="font-bold text-flame underline underline-offset-2">
+        <a href={`mailto:${SITE.email}`} className="font-bold text-flame-dark underline underline-offset-2">
           {SITE.email}
         </a>
         .

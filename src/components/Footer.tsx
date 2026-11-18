@@ -82,7 +82,7 @@ function NewsletterSignup() {
           onChange={(e) => setEmail(e.target.value)}
           className="w-full rounded-full border border-line bg-cream px-4 py-3 text-sm outline-none placeholder:text-ink-3 focus:border-flame"
         />
-        <button type="submit" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-flame px-5 py-3 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95">
+        <button type="submit" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-flame-dark px-5 py-3 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95">
           Subscribe <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </button>
       </div>
@@ -109,7 +109,7 @@ export function Footer() {
           <NewsletterSignup />
           <nav className="grid grid-cols-2 gap-x-10 gap-y-3 sm:grid-cols-3" aria-label="More pages">
             {FOOTER_LINKS.map((item) => (
-              <Link key={item.href} href={item.href} className="text-sm font-semibold text-ink-2 transition-colors hover:text-flame">
+              <Link key={item.href} href={item.href} className="text-sm font-semibold text-ink-2 transition-colors hover:text-flame-dark">
                 {item.label}
               </Link>
             ))}
@@ -119,7 +119,7 @@ export function Footer() {
           <Logo />
           <nav className="flex flex-wrap items-center gap-x-7 gap-y-3" aria-label="Footer navigation">
             {NAV.map((item) => (
-              <Link key={item.href} href={item.href} className="text-sm font-semibold text-ink-2 transition-colors hover:text-flame">
+              <Link key={item.href} href={item.href} className="text-sm font-semibold text-ink-2 transition-colors hover:text-flame-dark">
                 {item.label}
               </Link>
             ))}
@@ -137,7 +137,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 transition-all hover:border-flame hover:bg-flame hover:text-white"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 transition-all hover:border-flame hover:bg-flame-dark hover:text-white"
               >
                 <Icon className="h-4 w-4" aria-hidden="true" />
               </a>

@@ -26,7 +26,7 @@ export default function FaqPage() {
         <Reveal>
           <Eyebrow>FAQ</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            Questions, <span className="text-flame">answered honestly.</span>
+            Questions, <span className="text-flame-dark">answered honestly.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             Cost, timelines, revisions, ownership — the things every client asks before the first call.
@@ -40,7 +40,7 @@ export default function FaqPage() {
               <details key={f.q} open={i === 0} className="group px-6 py-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left">
                   <span className="font-display text-base font-extrabold tracking-tight sm:text-lg">{f.q}</span>
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cream-3 text-lg font-black transition-all group-open:rotate-45 group-open:bg-flame group-open:text-white" aria-hidden="true">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cream-3 text-lg font-black transition-all group-open:rotate-45 group-open:bg-flame-dark group-open:text-white" aria-hidden="true">
                     +
                   </span>
                 </summary>

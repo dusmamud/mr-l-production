@@ -16,7 +16,7 @@ export default function TestimonialsPage() {
         <Reveal>
           <Eyebrow>Testimonials</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            In our clients&apos; <span className="text-flame">own words.</span>
+            In our clients&apos; <span className="text-flame-dark">own words.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             We measure success in bookings, sales, views and recall — but the kindest measure is a client who would work with us again.
@@ -28,7 +28,7 @@ export default function TestimonialsPage() {
           {TESTIMONIALS.map((t, i) => (
             <Reveal key={t.name} delay={(i % 2) * 0.08}>
               <figure className="flex h-full flex-col rounded-[24px] bg-cream-2 p-6 ring-1 ring-line sm:p-8">
-                <Quote className="h-7 w-7 text-flame" aria-hidden="true" />
+                <Quote className="h-7 w-7 text-flame-dark" aria-hidden="true" />
                 <blockquote className="flex-1 pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>

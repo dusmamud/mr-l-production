@@ -43,7 +43,8 @@ body {
 }
 
 ::selection {
-  background: var(--color-flame);
+  /* White on flame is 3.13:1 (fails AA); white on flame-dark is 5.13:1. */
+  background: var(--color-flame-dark);
   color: #fff;
 }
 
@@ -56,9 +57,10 @@ body {
   cursor: none !important;
 }
 
-/* Focus visibility (a11y) */
+/* Focus visibility (a11y) — flame on cream is 2.81:1, below the 3:1
+   focus-indicator bar; flame-dark is 4.60:1. */
 :focus-visible {
-  outline: 3px solid var(--color-flame);
+  outline: 3px solid var(--color-flame-dark);
   outline-offset: 2px;
   border-radius: 4px;
 }

@@ -26,7 +26,7 @@ export default function CareersPage() {
         <Reveal>
           <Eyebrow>Careers</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            No open roles <span className="text-flame">right now.</span>
+            No open roles <span className="text-flame-dark">right now.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             We are a small studio on purpose, and we hire slowly. There is nothing open today — but brilliant people are always worth a conversation, and we keep every good introduction on file.
@@ -47,14 +47,14 @@ export default function CareersPage() {
         <Reveal>
           <div className="mt-10 rounded-[24px] bg-ink p-6 text-cream sm:p-10">
             <h2 className="font-display text-2xl font-black tracking-tight sm:text-3xl">
-              Think you belong <span className="text-flame">here?</span>
+              Think you belong <span className="text-flame-dark">here?</span>
             </h2>
             <p className="max-w-xl pt-3 leading-relaxed text-cream/70">
               Send us a note with what you do, a link to work you are proud of, and why this studio. We reply to every serious introduction — and if a role opens that fits, you will be the first to hear about it.
             </p>
             <a
               href={`mailto:${SITE.email}?subject=${subject}&body=${body}`}
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-flame px-7 py-4 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-flame-dark px-7 py-4 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95"
             >
               <Mail className="h-4 w-4" aria-hidden="true" /> Write to us <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>

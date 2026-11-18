@@ -32,9 +32,23 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) notFound();
   const related = PROJECTS.filter((p) => p.service === service.title);
+  const priceValue = service.priceFrom ? Number(service.priceFrom.replace(/[^0-9]/g, "")) : undefined;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    image: `${SITE.url}${service.image}`,
+    provider: { "@id": `${SITE.url}/#business` },
+    areaServed: "India",
+    ...(priceValue
+      ? { offers: { "@type": "Offer", priceCurrency: "INR", price: priceValue, availability: "https://schema.org/InStock" } }
+      : {}),
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <section className="mx-auto w-full max-w-7xl px-4 pt-10 pb-8 sm:px-6 lg:px-8 lg:pt-14">
         <Reveal>
           <Breadcrumbs
@@ -53,9 +67,10 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <Reveal>
           <SmartImage
             src={service.image}
-            alt={service.title}
+            alt=""
             width={1920}
             height={1280}
+            priority
             sizes="100vw"
             className="aspect-[16/9] w-full rounded-[24px] object-cover"
           />
@@ -66,7 +81,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <ul className="space-y-3 pt-5">
               {service.deliverables.map((d) => (
                 <li key={d} className="flex items-center gap-3 rounded-2xl bg-cream-2 px-4 py-3 text-sm font-semibold ring-1 ring-line">
-                  <Check className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" /> {d}
+                  <Check className="h-4 w-4 shrink-0 text-flame-dark" aria-hidden="true" /> {d}
                 </li>
               ))}
             </ul>
@@ -81,7 +96,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </p>
             <Link
               href="/contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-flame px-6 py-3.5 text-sm font-bold text-white"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-flame-dark px-6 py-3.5 text-sm font-bold text-white"
             >
               Start a {service.title} project <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -96,7 +111,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               {related.map((p) => (
                 <Reveal key={p.slug}>
                   <Link href={`/portfolio/${p.slug}`} className="group block overflow-hidden rounded-[24px] ring-1 ring-line">
-                    <SmartImage src={p.image} alt={p.title} width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <SmartImage src={p.image} alt="" width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     <div className="bg-cream-2 p-5">
                       <p className="font-display text-lg font-extrabold">{p.title}</p>
                       <p className="pt-1 text-sm text-ink-2">{p.summary}</p>

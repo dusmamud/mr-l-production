@@ -61,7 +61,7 @@ export function SearchClient() {
         <Reveal>
           <Eyebrow>Search</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            Search the <span className="text-flame">studio.</span>
+            Search the <span className="text-flame-dark">studio.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             Projects and articles, in one place. Try &ldquo;branding&rdquo;, &ldquo;motion&rdquo; or &ldquo;Velocity&rdquo;.
@@ -81,7 +81,7 @@ export function SearchClient() {
               placeholder="Search projects and articles…"
               className="w-full bg-transparent text-sm outline-none placeholder:text-ink-3 sm:text-base"
             />
-            <button type="submit" className="shrink-0 rounded-full bg-flame px-5 py-2 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95">
+            <button type="submit" className="shrink-0 rounded-full bg-flame-dark px-5 py-2 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95">
               Search
             </button>
           </form>
@@ -98,7 +98,7 @@ export function SearchClient() {
             <p className="mx-auto max-w-md pt-3 text-sm leading-relaxed text-ink-2 sm:text-base">
               Try a different word — &ldquo;branding&rdquo;, &ldquo;web&rdquo; or &ldquo;motion&rdquo; usually work — or tell us what you are looking for and we will point you to it.
             </p>
-            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-flame px-6 py-3 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95">
+            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-flame-dark px-6 py-3 text-sm font-bold text-white transition-transform hover:scale-[1.03] active:scale-95">
               Ask us directly <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
@@ -115,7 +115,7 @@ export function SearchClient() {
                   <div className="overflow-hidden">
                     <SmartImage
                       src={h.image}
-                      alt={h.title}
+                      alt=""
                       width={1200}
                       height={800}
                       loading="lazy"
@@ -128,7 +128,7 @@ export function SearchClient() {
                     <h2 className="pt-3 font-display text-xl leading-snug font-extrabold tracking-tight">{h.title}</h2>
                     <p className="flex-1 pt-2 text-sm leading-relaxed text-ink-2">{h.excerpt}</p>
                     <p className="inline-flex items-center gap-2 pt-4 text-sm font-bold text-ink">
-                      View {h.kind === "Project" ? "project" : "article"} <ArrowRight className="h-4 w-4 text-flame transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                      View {h.kind === "Project" ? "project" : "article"} <ArrowRight className="h-4 w-4 text-flame-dark transition-transform group-hover:translate-x-1" aria-hidden="true" />
                     </p>
                   </div>
                 </Link>

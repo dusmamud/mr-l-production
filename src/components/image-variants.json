@@ -1,0 +1,99 @@
+{
+  "/images/about.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/hero-wide.png": [
+    480,
+    651
+  ],
+  "/images/portfolio-campaign.jpg": [
+    480,
+    800,
+    1200,
+    1280
+  ],
+  "/images/portfolio-digital.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/portfolio-visual.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/process-ring.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/process-ring.png": [
+    480,
+    800,
+    820
+  ],
+  "/images/project-lumen.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/project-northwind.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/project-orbit.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/service-branding.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/service-motion.png": [
+    480,
+    634
+  ],
+  "/images/service-web.jpg": [
+    480,
+    800,
+    1200,
+    1920
+  ],
+  "/images/team-arjun.jpg": [
+    480,
+    800,
+    1200,
+    1280
+  ],
+  "/images/team-kabir.jpg": [
+    480,
+    800,
+    1200,
+    1280
+  ],
+  "/images/team-priya.jpg": [
+    480,
+    800,
+    1200,
+    1280
+  ],
+  "/images/team-sara.jpg": [
+    480,
+    800,
+    1200,
+    1600
+  ]
+}

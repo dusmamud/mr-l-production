@@ -77,7 +77,7 @@ export function Cursor() {
     <>
       {/* Flame dot — follows the pointer exactly. */}
       <motion.div aria-hidden="true" className="pointer-events-none fixed top-0 left-0 z-[100]" style={{ x, y }}>
-        <div className="h-2 w-2 -mt-1 -ml-1 rounded-full bg-flame" />
+        <div className="h-2 w-2 -mt-1 -ml-1 rounded-full bg-flame-dark" />
       </motion.div>
       {/* Trailing ring — lags on a spring, grows over interactive elements. */}
       <motion.div

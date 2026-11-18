@@ -61,7 +61,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
       <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <Reveal>
-          <SmartImage src={project.image} alt={project.title} width={1920} height={1280} sizes="100vw" className="aspect-[16/9] w-full rounded-[24px] object-cover" />
+          <SmartImage src={project.image} alt="" width={1920} height={1280} priority sizes="100vw" className="aspect-[16/9] w-full rounded-[24px] object-cover" />
         </Reveal>
         <div className="grid gap-10 pt-10 lg:grid-cols-2">
           <Reveal>
@@ -84,7 +84,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <ul className="space-y-3 pt-5">
               {metrics.map((r) => (
                 <li key={r} className="flex items-center gap-3 rounded-2xl bg-cream-2 px-4 py-3 text-sm font-semibold ring-1 ring-line">
-                  <Check className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" /> {r}
+                  <Check className="h-4 w-4 shrink-0 text-flame-dark" aria-hidden="true" /> {r}
                 </li>
               ))}
             </ul>
@@ -113,20 +113,20 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <div className="grid gap-5 pt-6 sm:grid-cols-2">
               <Reveal>
                 <Link href={`/services/${service.slug}`} className="group block overflow-hidden rounded-[24px] ring-1 ring-line">
-                  <SmartImage src={service.image} alt={service.title} width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <SmartImage src={service.image} alt="" width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="flex items-center justify-between bg-cream-2 p-5">
                     <p className="font-display text-lg font-extrabold">{service.title}</p>
-                    <ArrowRight className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" />
+                    <ArrowRight className="h-4 w-4 shrink-0 text-flame-dark" aria-hidden="true" />
                   </div>
                 </Link>
               </Reveal>
               {others[0] && (
                 <Reveal delay={0.08}>
                   <Link href={`/portfolio/${others[0].slug}`} className="group block overflow-hidden rounded-[24px] ring-1 ring-line">
-                    <SmartImage src={others[0].image} alt={others[0].title} width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <SmartImage src={others[0].image} alt="" width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     <div className="flex items-center justify-between bg-cream-2 p-5">
                       <p className="font-display text-lg font-extrabold">{others[0].title}</p>
-                      <ArrowRight className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" />
+                      <ArrowRight className="h-4 w-4 shrink-0 text-flame-dark" aria-hidden="true" />
                     </div>
                   </Link>
                 </Reveal>
@@ -142,10 +142,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             {moreWork.map((p) => (
               <Reveal key={p.slug}>
                 <Link href={`/portfolio/${p.slug}`} className="group block overflow-hidden rounded-[24px] ring-1 ring-line">
-                  <SmartImage src={p.image} alt={p.title} width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <SmartImage src={p.image} alt="" width={1200} height={800} loading="lazy" sizes="(max-width: 640px) 100vw, 50vw" className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="flex items-center justify-between bg-cream-2 p-5">
                     <p className="font-display text-lg font-extrabold">{p.title}</p>
-                    <ArrowRight className="h-4 w-4 shrink-0 text-flame" aria-hidden="true" />
+                    <ArrowRight className="h-4 w-4 shrink-0 text-flame-dark" aria-hidden="true" />
                   </div>
                 </Link>
               </Reveal>

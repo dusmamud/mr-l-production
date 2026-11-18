@@ -12,10 +12,10 @@ export function Testimonials() {
         <Eyebrow>Testimonials</Eyebrow>
         <div className="flex flex-wrap items-end justify-between gap-4 pt-4">
           <h2 className="max-w-xl font-display text-3xl font-black tracking-tight sm:text-4xl">
-            Clients who would <span className="text-flame">work with us again.</span>
+            Clients who would <span className="text-flame-dark">work with us again.</span>
           </h2>
-          <Link href="/testimonials" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-flame">
-            All testimonials <ArrowRight className="h-4 w-4 text-flame" aria-hidden="true" />
+          <Link href="/testimonials" className="inline-flex items-center gap-2 text-sm font-bold text-ink hover:text-flame-dark">
+            All testimonials <ArrowRight className="h-4 w-4 text-flame-dark" aria-hidden="true" />
           </Link>
         </div>
       </Reveal>
@@ -23,7 +23,7 @@ export function Testimonials() {
         {shown.map((t, i) => (
           <Reveal key={t.name} delay={i * 0.08}>
             <figure className="flex h-full flex-col rounded-[24px] bg-cream-2 p-6 ring-1 ring-line">
-              <Quote className="h-6 w-6 text-flame" aria-hidden="true" />
+              <Quote className="h-6 w-6 text-flame-dark" aria-hidden="true" />
               <blockquote className="flex-1 pt-4 text-sm leading-relaxed text-ink-2 sm:text-base">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>

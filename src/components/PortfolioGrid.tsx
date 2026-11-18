@@ -36,7 +36,7 @@ export function PortfolioGrid() {
               <div className="relative aspect-[4/5] overflow-hidden">
                 <SmartImage
                   src={p.image}
-                  alt={p.title}
+                  alt=""
                   width={900}
                   height={1125}
                   loading="lazy"

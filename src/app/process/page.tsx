@@ -17,7 +17,7 @@ export default function ProcessPage() {
         <Reveal>
           <Eyebrow>Our Process</Eyebrow>
           <h1 className="max-w-3xl pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-            A simple process. <span className="text-flame">A big impact.</span>
+            A simple process. <span className="text-flame-dark">A big impact.</span>
           </h1>
           <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
             Six steps, seven weeks, no surprises. Here is exactly what happens at each stage — and what we need from you to keep it moving.
@@ -29,10 +29,10 @@ export default function ProcessPage() {
           {PROCESS_TIMELINE.map((s, i) => (
             <li key={s.title} className="relative">
               <Reveal delay={i * 0.04}>
-                <span className="absolute top-0 -left-8 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-flame font-display text-sm font-black text-white sm:-left-12" aria-hidden="true">
+                <span className="absolute top-0 -left-8 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full bg-flame-dark font-display text-sm font-black text-white sm:-left-12" aria-hidden="true">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="text-xs font-bold tracking-[0.2em] text-flame uppercase">{s.weeks}</p>
+                <p className="text-xs font-bold tracking-[0.2em] text-flame-dark uppercase">{s.weeks}</p>
                 <h2 className="pt-2 font-display text-2xl font-black tracking-tight sm:text-3xl">{s.title}</h2>
                 <p className="max-w-3xl pt-3 leading-relaxed text-ink-2">{s.happens}</p>
                 <p className="max-w-3xl pt-3 text-sm leading-relaxed">

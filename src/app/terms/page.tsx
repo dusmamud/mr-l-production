@@ -64,7 +64,7 @@ export default function TermsPage() {
       <Reveal>
         <Eyebrow>Legal</Eyebrow>
         <h1 className="pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-          Terms of <span className="text-flame">Service.</span>
+          Terms of <span className="text-flame-dark">Service.</span>
         </h1>
         <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
           Plain-language terms for using this site and working with the studio. If anything here is unclear, ask us before you agree to it.

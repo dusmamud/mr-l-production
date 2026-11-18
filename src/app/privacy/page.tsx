@@ -56,7 +56,7 @@ export default function PrivacyPage() {
       <Reveal>
         <Eyebrow>Legal</Eyebrow>
         <h1 className="pt-4 font-display text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl">
-          Privacy <span className="text-flame">Policy.</span>
+          Privacy <span className="text-flame-dark">Policy.</span>
         </h1>
         <p className="max-w-2xl pt-4 text-base leading-relaxed text-ink-2 sm:text-lg">
           Short version: we only use what you send us to answer you — and we do not sell it, share it, or keep it longer than needed.

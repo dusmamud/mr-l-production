@@ -57,14 +57,34 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: SITE.name,
-  description: SITE.description,
-  url: SITE.url,
-  email: SITE.email,
-  telephone: SITE.phone,
-  address: { "@type": "PostalAddress", addressLocality: "Mumbai", addressCountry: "IN" },
-  sameAs: Object.values(SITE.socials),
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": `${SITE.url}/#business`,
+      name: SITE.name,
+      description: SITE.description,
+      url: SITE.url,
+      email: SITE.email,
+      telephone: SITE.phone,
+      // priceRange from the starting prices published on /services.
+      priceRange: "₹50,000–₹80,000",
+      image: `${SITE.url}/images/og.jpg`,
+      address: { "@type": "PostalAddress", addressLocality: "Mumbai", addressCountry: "IN" },
+      sameAs: Object.values(SITE.socials),
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE.url}/#website`,
+      url: SITE.url,
+      name: SITE.name,
+      publisher: { "@id": `${SITE.url}/#business` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: { "@type": "EntryPoint", urlTemplate: `${SITE.url}/search/?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

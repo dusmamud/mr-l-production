@@ -58,7 +58,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
           <motion.div
             key={`flame-${pathname}`}
             aria-hidden="true"
-            className="pointer-events-none fixed inset-0 z-[90] bg-flame"
+            className="pointer-events-none fixed inset-0 z-[90] bg-flame-dark"
             initial={{ x: "-102%" }}
             animate={{ x: ["-102%", "0%", "102%"] }}
             transition={{ duration: WIPE_MS / 1000, times: [0, 0.45, 1], delay: FLAME_DELAY_S, ease: "easeInOut" }}
